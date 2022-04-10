@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>Gioco memory</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Memory Game</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-  <div class="container icon-grid" id="griglia">    
-    </div>
-    <div class="container text-center">  
-      <input type="button" id="button" class="button" onclick=startGame() value="Ricomincia">
-      <div class="timer">Tempo: 0 min 0 sec</div>  
-    </div>
-  
-    <div id="modal">      
-      <div class="content">
-          <h2>Congratulazioni hai risolto il gioco in </h2>
-          <p><span id=tempoTrascorso> </span> </p>
-          <p><input type="button" class="button" onclick=playAgain() value="Gioca Ancora!"></p>
-      </div>        
-    </div>
-  
-   <script src="js/memory.js"></script>
+	<div class="container">
+		<div class="row">
+			<div class="box">
+				<div class="numclicks">
+					<h2>Numero di click: <span id="clicks">0</span></h2>
+				</div>
+				
+				<div id="struttura"></div>
+				
+
+				<div id="vittoria">VITTORIA</div>
+				
+				<!-- Inserisco location.reload() per ricaricare il documento -->
+				
+
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
+
+

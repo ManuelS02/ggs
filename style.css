@@ -1,166 +1,83 @@
-
-  .container{
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+#struttura{
+    border: red solid 3px;
     width: 600px;
-    margin:auto;
-    background-color: #fcd83b;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .icon-grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .show {
-    visibility: visible !important;
-    opacity: 100 !important;
-  }
-  
-  
-  #griglia > div{
-    margin: 20px 10px;
-    width: 120px;
-    height: 120px;
-    background-color: #af00be;
-    border: 1px solid #ff5e00;
+    height: 600px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.carta{
+    background: rgba(0,218,219,1);
+    width: 140px;
+    height: 140px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
     border-radius: 10px;
-  
-  }
-  
-  .timer {
-    padding: 10px 0;
-  }
-  
-  .icon {
-    font-size: 80px;
-    text-align: center;
-    visibility: visible !important;
-    opacity:0;
+}
+
+.carta>img{
     width: 100%;
     height: 100%;
-    cursor: pointer;
-  }
-  
-  .disabled {
-    pointer-events: none;
-    cursor:wait;
-  }
-  
-  .show {
-    animation-name: rotazione-carta;
-    animation-duration: .5s;
-    background-color:white;
-    border: 1px solid #3889c4;
-    border-radius: 10px;
-  }
-  
-  .find {
-    animation-name: indovinato;
-    animation-duration: .5s;
-    background-color:#3889c4;
-    border: 1px solid #3889c4;
-    border-radius: 10px;
-  }
-  
-  .button{
-    color: white;
-    font-size: 22px;
+}
+
+#vittoria{
     text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #af00be;
-    border: 1px solid #ff5e00;
-    border-radius: 5px;
-  }
-  
-  .button:hover{
-    background-color: #16486c;
-    border:none;
-  }
-  
-  #modal {
+    width: 100%;
+    background: red;
+    font-size:100px; 
+    visibility: hidden;
+    margin:auto
+}
+    
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+}
+
+.row {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 1250px;
+    margin: auto;
+}
+
+.box {
+    width: 50%;
+    margin: auto;
+}
+
+.numclicks, h2 {
+    text-align: left;
+}
+
+.images img {
+    padding: 5px;
     display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
-  #modal.active {
-    display: flex;
-  }
-  
-  #modal h2 {
+.restart {
+    text-align: center;
+}
+
+#Restart {
+    font-family: 'Montserrat Alternates', sans-serif;
+    float: left;
     margin-top: 20px;
-  }
-    
-  
-  @media (max-width: 600px) {
-	.container {
-		width: 400px;
-	}
-
-	#griglia > div{
-		margin: 5px 5px;
-		width: 70px;
-		height: 70px;
-	}
-	.icon {
-		font-size: 60px;
-
-	}
+    border-radius: 10px;
+    padding: 10px 10px;
+    background: rgb(15, 15, 15);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
-
-@media (max-width: 420px) {
-	.container {
-		width: 230px;
-	}
-
-	#griglia > div{
-		margin: 5px 5px;
-		width: 40px;
-		height: 40px;
-	}
-	.icon {
-		font-size: 20px;
-
-	}
-}
-  
-  @keyframes indovinato { 
-    from { 
-      transform: rotate(0deg);
-      
-      } 
-      to { 
-          transform: rotate(360deg);
-         
-      }
-  }
-  
-  @keyframes rotazione-carta {
-    from {
-      transform: perspective(300px) rotate3d(0, 1, 0, 80deg);
-      animation-timing-function: ease-in;
-    }
-  
-    50% {
-      transform: perspective(300px) rotate3d(0, 1, 0, -10deg);
-      animation-timing-function: ease-in;
-    }
-  
-    to {
-      transform: perspective(300px);
-      animation-timing-function: ease-in;
-    }
-    
-  }
